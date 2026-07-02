@@ -1,0 +1,30 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body
+{
+    overflow: hidden;
+}
+
+.webgl
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+}
+
+.trigger-line {
+    position: absolute;
+    z-index: 10;
+    right: 40px;
+    top: 32px;
+    background: #fff;
+}
+
+
+/*# sourceMappingURL=main.css.map*/

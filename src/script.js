@@ -1,16 +1,19 @@
 import './style.css'
 
 import FloatingModel from './model'
+import { gsap, ScrollTrigger } from 'gsap/all'
+
+gsap.registerPlugin(ScrollTrigger)
 
 window.onload = () => {
   const floating = new FloatingModel({
     element: document.querySelector('.webgl')
   })
 
-  document.querySelector('.scene-1').addEventListener('click', () => {
-    floating.sceneOne()
-  })
-  document.querySelector('.scene-2').addEventListener('click', () => {
-    floating.sceneTwo()
+  ScrollTrigger.create({
+    trigger: '.scene-2',
+    start: 'top center',
+    onEnter: () => floating.sceneTwo(),
+    onLeaveBack: () => floating.sceneOne()
   })
 }

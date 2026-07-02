@@ -7,7 +7,7 @@
 html,
 body
 {
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .webgl
@@ -18,10 +18,13 @@ body
     outline: none;
 }
 
-.trigger-line {
-    position: absolute;
-    z-index: 10;
-    right: 40px;
-    top: 32px;
-    background: #fff;
+.scroll-sections
+{
+    position: relative;
+    z-index: -1;
+}
+
+.scene-section
+{
+    height: 100vh;
 }
